@@ -7,7 +7,7 @@ This project focuses on the design and development of an ESP32-P4-based IoT Ener
 The ESP32-P4 microcontroller processes the collected data and enables data communication through Ethernet and Wi-Fi. A MAX485CSA transceiver supports RS-485 communication with the energy meter, while a TXS0102DCUR level shifter provides voltage-level compatibility between interfacing circuits. An OLED display provides local monitoring, and an RGB LED indicates system status.
 The PCB integrates an AC-DC converter and buck converters to generate the required DC supply voltages for the circuit components. The proposed system provides a compact platform for energy data acquisition, local display, and network-based monitoring, with potential applications in smart energy management and industrial monitoring systems.
 
-BLOCK DIAGRAM:
+
 <img width="539" height="372" alt="Screenshot 2026-10-10 135713" src="https://github.com/user-attachments/assets/c4bd391f-daa9-4486-8c00-d80049581c8f" />
 
 
@@ -199,6 +199,7 @@ SCHEMATIC:
 <img width="503" height="332" alt="image" src="https://github.com/user-attachments/assets/1f8e3846-043b-4581-a3bd-218f014fcab8" />
 
 DRAFTSMAN
+
 <img width="524" height="368" alt="image" src="https://github.com/user-attachments/assets/30be3a26-8ca4-4dd2-97b7-e36adaacf1e1" />
 <img width="523" height="370" alt="image" src="https://github.com/user-attachments/assets/c7a5b015-7523-4694-83c5-6194fc8ce323" />
 
