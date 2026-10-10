@@ -198,6 +198,11 @@ SCHEMATIC:
 <img width="555" height="367" alt="image" src="https://github.com/user-attachments/assets/de70a583-85b0-487c-a200-f3c2255ab77c" />
 <img width="503" height="332" alt="image" src="https://github.com/user-attachments/assets/1f8e3846-043b-4581-a3bd-218f014fcab8" />
 
+3D MODEL:
+
+<img width="605" height="341" alt="Screenshot 2026-10-10 111440" src="https://github.com/user-attachments/assets/e184575b-9c43-4e3b-8371-f03882b7e775" />
+
+
 DRAFTSMAN
 
 <img width="524" height="368" alt="image" src="https://github.com/user-attachments/assets/30be3a26-8ca4-4dd2-97b7-e36adaacf1e1" />
