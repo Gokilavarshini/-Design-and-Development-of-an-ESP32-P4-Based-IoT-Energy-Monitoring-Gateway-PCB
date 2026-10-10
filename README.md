@@ -7,6 +7,9 @@ This project focuses on the design and development of an ESP32-P4-based IoT Ener
 The ESP32-P4 microcontroller processes the collected data and enables data communication through Ethernet and Wi-Fi. A MAX485CSA transceiver supports RS-485 communication with the energy meter, while a TXS0102DCUR level shifter provides voltage-level compatibility between interfacing circuits. An OLED display provides local monitoring, and an RGB LED indicates system status.
 The PCB integrates an AC-DC converter and buck converters to generate the required DC supply voltages for the circuit components. The proposed system provides a compact platform for energy data acquisition, local display, and network-based monitoring, with potential applications in smart energy management and industrial monitoring systems.
 
+BLOCK DIAGRAM:
+<img width="539" height="372" alt="Screenshot 2026-10-10 135713" src="https://github.com/user-attachments/assets/c4bd391f-daa9-4486-8c00-d80049581c8f" />
+
 
 
 Power Input
@@ -17,7 +20,9 @@ Power Input
 2. DC Jack (12 V DC)
 - Provides a convenient connection for the 12 V DC input supply.
  Supplies power to the low-voltage DC circuits through the power regulation stage.
+
 AC POWER PROTECTION CIRCUIT:
+
 A fuse protects the circuit against excessive current flow. When the current exceeds its rated limit, the fuse melts and disconnects the power supply. This helps prevent component damage and reduces the risk of overheating and fire.
 An MOV protects the circuit against sudden voltage surges in the AC supply. Under normal voltage, it has high resistance. During a voltage surge, its resistance decreases, allowing it to divert surge current and limit the voltage reaching the protected circuit. This helps protect sensitive components from transient overvoltage.
 
@@ -27,97 +32,45 @@ An MOV protects the circuit against sudden voltage surges in the AC supply. Unde
 
 
 PZEM-004T V3.0 Energy Measurement Module
+
 The PZEM-004T V3.0 measures AC voltage, current, active power, energy consumption, frequency, and power factor. The AC input is connected to the module for voltage measurement.
 Current Transformer (CT) measures the load current. The module communicates with the ESP32-P4 through UART serial communication
 
 
 Three-Phase Energy Meter with RS485 Communication
+
 A three-phase, four-wire energy meter is used to measure electrical energy consumption in three-phase systems. It monitors parameters such as voltage, current, power, and energy consumption across the three phases. 
 Compared to the PZEM-004T V3.0, which is generally used for single-phase measurements, this meter is suitable for industrial three-phase energy monitoring. When equipped with RS485 communication, it can transmit measurement data to the ESP32-P4 through an RS485 transceiver. This enables centralized monitoring, reliable long-distance communication, and integration with an IoT-based energy monitoring system.
 
-
-
-
-
-Feature
-PZEM-004T V3
-3-Phase Energy Meter
-When to use
-Low-cost, single-phase monitoring
-Industrial, three-phase monitoring
-Input
-Single-phase AC
-Three-phase AC 
-Measurement
-Voltage, current, power, energy, frequency, power factor
-voltage, current, power, energy, power factor
-Communication
-UART (TTL serial)
-RS485 using Modbus RTU (if supported by meter)
-ESP32 connection
-UART directly, suitable logic-level compatibility check required
-RS485 transceiver via UART
-Main benefit
-Simple connection, low cost, easy integration
-Industrial monitoring, longer communication distance, better noise immunity
-Best application
-Home appliances, single-phase loads
-Factories, industrial machines, three-phase loads
-
-
-
-
-
-
-
-
 Voltage Level Shifter (TXS0102DCUR)
+
 The TXS0102DCUR is used to interface the 5 V UART signals from the PZEM-004T V3 with the 3.3 V logic signals of the ESP32-P4. It provides bidirectional voltage-level translation between the two devices, helping ensure compatible UART communication and protecting the ESP32 from incompatible logic levels.
+
 HLK-10M05 AC-DC Power Module
+
 The HLK-10M05 is an AC-to-DC power module used to convert 230 V AC input into a regulated 5 V DC output. It supplies power to the low-voltage components in our energy monitoring gateway PCB. It provides an isolated power supply, helping separate the high-voltage AC input from the low-voltage circuit.
+
 DC-DC Buck Converter Power Supply
+
 The power supply section uses buck converters to step down the input voltage to the required levels for different components in the energy monitoring gateway PCB. The 12 V DC input from the DC jack is converted to 5 V, then 5 V is stepped down to 3.3 V, and finally 3.3 V is converted to 1.1 V for the corresponding circuit requirements. This provides the required voltage levels for the ESP32 and other components.
+
 Voltage conversion: 12 V DC → 5 V → 3.3 V → 1.1 V.
+
 Ethernet and Wi-Fi Connectivity
+
 Ethernet: Provides a stable, wired network connection for reliable energy data transmission and remote monitoring.
 Wi-Fi: Enables wireless connectivity for transmitting energy monitoring data to a dashboard or IoT platform.
 Output Devices
 OLED Display: Displays energy monitoring parameters and system status using I²C communication with the ESP32-P4.
 RGB LED: Indicates different system operating conditions through colour changes, providing visual status alerts.
 
-
-
-
-
 Wi-Fi Antenna Keep-Out Zone
 A keep-out zone is maintained around the ESP-12F Wi-Fi antenna without copper traces, ground planes, or components. This prevents electromagnetic interference and signal obstruction near the antenna. It helps improve RF signal strength, wireless communication reliability, and overall Wi-Fi performance.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 AC and DC Section Separation
+
 AC Section: Contains the 230 V AC input and related protection components. It is separated to reduce electrical interference and improve safety.
 DC Section: Contains low-voltage circuits such as the ESP32-P4, OLED and communication interfaces. It supports stable operation and reduces noise coupling from the AC section.
-
-
-
-
-
-
-
 
 3D MODEL
 
@@ -236,3 +189,21 @@ https://www.quick-teck.co.uk/Management/EEUploadFile/1548298650.pdf
 https://universal-solder.ca/downloads/canaduino_oled_1.3_i2c.pdf
 13.ETHERNET PORT:
 https://www.snapeda.com/parts/WIZ850IO/WIZnet/datasheet/
+
+SCHEMATIC:
+
+<img width="609" height="404" alt="Screenshot 2026-10-10 140537" src="https://github.com/user-attachments/assets/515af454-e37f-4d56-94b4-3f402e81737e" />
+<img width="555" height="367" alt="image" src="https://github.com/user-attachments/assets/17d448f9-99f9-4f0f-aab1-14229c142d43" />
+<img width="556" height="367" alt="image" src="https://github.com/user-attachments/assets/16b0cbac-19b4-4df4-b4b2-9a29cc2d497f" />
+<img width="555" height="367" alt="image" src="https://github.com/user-attachments/assets/de70a583-85b0-487c-a200-f3c2255ab77c" />
+<img width="503" height="332" alt="image" src="https://github.com/user-attachments/assets/1f8e3846-043b-4581-a3bd-218f014fcab8" />
+
+DRAFTSMAN
+<img width="524" height="368" alt="image" src="https://github.com/user-attachments/assets/30be3a26-8ca4-4dd2-97b7-e36adaacf1e1" />
+<img width="523" height="370" alt="image" src="https://github.com/user-attachments/assets/c7a5b015-7523-4694-83c5-6194fc8ce323" />
+
+
+
+
+
+
