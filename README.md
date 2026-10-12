@@ -166,27 +166,38 @@ DATA SHEET
 
 1.esp32-p4nrw32:
 https://www.snapeda.com/parts/ESP32-P4NRW32/Espressif%20Systems/datasheet/
+
 2.DC Jack:
 https://www.snapeda.com/parts/PJ-102A/Same%20Sky/datasheet/
+
 3.ESD:
 https://www.snapeda.com/parts/ESD12VD3B-TP/MCC/datasheet/
+
 4.FUSE:
 https://www.snapeda.com/parts/FX0321/Bulgin/datasheet/
+
 5.HLK:
 https://www.lcsc.com/datasheet/lcsc_datasheet_2409141603_HI-LINK-HLK-10M05_C403745.pdf
+
 6.VOLTAGE SHIFTER: https://www.alldatasheet.com/datasheet-pdf/view/173715/TI/TXS0102DCUR.html
 7.PZEM-004T:
 https://innovatorsguru.com/wp-content/uploads/2019/06/PZEM-004T-V3.0-Datasheet-User-Manual.pdf
+
 8. 5V BUCK COVERTOR:
 https://www.alldatasheet.com/datasheet-pdf/view/1009587/TI1/TPS259541DSGR.html
-9. 3.3V BUCK CONVERTOR:
+
+10. 3.3V BUCK CONVERTOR:
 https://www.alldatasheet.com/datasheet-pdf/view/546290/TI1/TPS62130RGTR.html
+
 10.1.1V BUCK CONVERTOR:
 https://www.alldatasheet.com/datasheet-pdf/view/881531/TI1/TLV62569DBVR.html
+
 11.WIFI MODULE:
 https://www.quick-teck.co.uk/Management/EEUploadFile/1548298650.pdf
+
 12.OLED DISPLAY:
 https://universal-solder.ca/downloads/canaduino_oled_1.3_i2c.pdf
+
 13.ETHERNET PORT:
 https://www.snapeda.com/parts/WIZ850IO/WIZnet/datasheet/
 
